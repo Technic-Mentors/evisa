@@ -1,0 +1,102 @@
+/* Base Styling */
+body {
+    font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: white;
+  color: #000;
+}
+
+/* Header */
+.top-header {
+  background-color: #1d70b8;
+  color: #fff;
+  padding: 40px 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-header h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.top-header .guidance {
+  font-size: 20px;
+  margin: 0;
+}
+
+.top-header .updated {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Layout */
+.content-wrapper {
+  display: flex;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  position: fixed;
+  top: 250px;
+  left: 60px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #1d70b8;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.purple-link {
+  color: purple;
+}
+
+/* Print Button */
+.print-btn {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 340px; /* leave space for sidebar */
+  max-width: 900px;
+}
+
+.main-content h2 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.main-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
