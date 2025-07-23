@@ -1,13 +1,11 @@
-/* Base Styling */
 body {
-    font-size: 18px;
+  font-size: 16px;
   font-family: 'Arial', sans-serif;
   margin: 0;
   background-color: white;
   color: #000;
 }
 
-/* Header */
 .top-header {
   background-color: #1d70b8;
   color: #fff;
@@ -32,14 +30,12 @@ body {
   margin-top: 10px;
 }
 
-/* Layout */
 .content-wrapper {
   display: flex;
   padding: 40px 60px;
   box-sizing: border-box;
 }
 
-/* Sidebar */
 .sidebar {
   width: 280px;
   position: fixed;
@@ -76,7 +72,6 @@ body {
   color: purple;
 }
 
-/* Print Button */
 .print-btn {
   padding: 8px 12px;
   font-size: 16px;
@@ -85,9 +80,8 @@ body {
   cursor: pointer;
 }
 
-/* Main Content */
 .main-content {
-  margin-left: 340px; /* leave space for sidebar */
+  margin-left: 340px;
   max-width: 900px;
 }
 
@@ -99,4 +93,83 @@ body {
 .main-content h3 {
   font-size: 22px;
   margin-top: 30px;
+}
+
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .print-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-header {
+    padding: 20px;
+  }
+
+  .top-header h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .top-header .guidance {
+    font-size: 16px;
+  }
+
+  .top-header .updated {
+    font-size: 14px;
+  }
+
+  .sidebar h3 {
+    font-size: 16px;
+  }
+
+  .sidebar ul li a {
+    font-size: 14px;
+  }
+
+  .main-content h2 {
+    font-size: 20px;
+  }
+
+  .main-content h3 {
+    font-size: 16px;
+  }
+
+  .main-content p,
+  .main-content li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .print-btn {
+    font-size: 14px;
+  }
 }
