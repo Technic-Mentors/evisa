@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Roboto Slab", serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 60%;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .mainheading h1 {
+      font-size: 57px;
+    }
+
+    .second {
+      font-size: 20px;
+    }
+
+    .a {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .btn {
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      border-bottom: 2px solid black;
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn a {
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .butn {
+      background-color: whitesmoke;
+      color: black;
+      border: none;
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+      width: 70%;
+      text-align: center;
+    }
+
+    .butn a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .img {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .img img {
+      max-width: 100%;
+      height: 600px;
+      border: 2px solid black;
+    }
+
+    .mainfooter {
+      width: 75%;
+      background-color: #f5f9fc;
+      padding: 20px;
+      margin: auto;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      
+      
+    }
+
+    .footer {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .li {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 10px;
+      padding: 0;
+      font-size: 16px;
+      row-gap: 0px;
+
+
+    }
+
+    .li li {
+      list-style: none;
+      margin: 0;
+    }
+    .li li{ margin: 1.5px; } 
+
+
+    .footer a {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .footer a:hover {
+      cursor: pointer;
+    }
+
+    .lastpart {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .lastpart svg {
+      margin-top: 22px;
+    }
+
+    .lastpart p {
+      margin: 6px 0 0;
+    }
+
+    /* ---------------- RESPONSIVENESS ---------------- */
+
+    @media (max-width: 1024px) {
+      .main {
+        width: 80%;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        width: 90%;
+        padding: 10px;
+      }
+
+      .btn,
+      .butn {
+        width: 90%;
+        font-size: 18px;
+      }
+
+      .mainheading h1 {
+        font-size: 20px;
+      }
+
+      .second {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .mainheading h1{
+        font-size: 29px;
+      }
+
+      .btn {
+        width: 100%;
+        font-size: 16px;
+      }
+      .butn {
+        width: 50%;
+      }
+
+      .second {
+        font-size: 16px;
+      }
+
+      .li {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .img img {
+        width: 50%;
+        height: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="mainheading">
+      <h1>Your immigration status (eVisa)</h1>
+    </div>
+    <div class="second">
+        <h4>Name</h4><p>Hamas Butt</p><hr>
+        <h4>Date of Birth</h4><p>13 September 1977</p><hr>
+        <h4>Nationality</h4><p>PAK</p><hr>
+        <h4>Status</h4><p>Skilled worker</p><hr>
+        <h4>Valid Until</h4><p>15 August 2028</p><hr>
+        <p>To stay in the UK after this date, you will need to have either pre-settled status or settled status under the EU Settlement Scheme (or another type of permission to stay).</p>
+        <p>You can apply to switch to settled status as soon as you are eligible for it. This is usually once you have lived in UK for 5 years. Find out <a class="a">how to switch for settled status.</a></p>
+
+        <h2>Prove your Status</h2>
+        <p>If you need to prove your immigration status to someone, you can do this online with a share code.</p>
+    </div>
+    <button class="btn"><a href="details.html">Get a Share Code</a></button>
+
+    <div class="img">
+        <img src="WhatsApp Image 2025-08-15 at 21.41.01_fe0f6cee.jpg" alt="">
+    </div>
+
+    <button class="butn"><a>Rotate</a></button>
+
+    <div class="third">
+        <h2>What you can do in the UK</h2>
+        <p>Your <a class="a">pre-settled status means you can: </a></p>
+        <ul>
+            <li>live in the UK</li>
+            <li>work</li>
+            <li>study</li>
+            <li>rent a place to live</li>
+            <li>use the National Health Service (NHS) in a similar way to a permanent UK resident</li>
+            <li>access <a class="a"> public funds,</a> if you are eligible for them </li>
+            <li>access a current account with a bank or building society in the UK</li>
+            <li>travel in and out from the UK. If you can <a class="a">provide the required documents</a> - you may not be able to travel to or enter the UK without them.</li>
+        </ul>
+    </div>
+
+    <div class="fourth">
+        <h2>Legal basis of status</h2>
+        <p>This status was granted in accordance with the EU exit separation agreements:</p>
+        <ul>
+            <li>for EU citizens, and the family members of EU citizens, this is the Withdrawal Agreement</li>
+            <li>for EEA European Free Trade Association (EFTA) citizens, and the family members of EEA EFTA citizens, this is the EEA EFTA Separation Agreement</li>
+            <li>for Swiss citizens, and the family members of Swiss citizens, this is the Swiss Citizens' Rights Agreement</li>
+        </ul>
+        <hr>
+    </div>
+
+    <div class="five">
+        <h2>Keep your details up to date</h2>
+        <p>You must keep your personal details up to date in your UK Visas and Immigration (UKVI) account.</p>
+        <p>You can <a class="a">check and update the details in your UKVI account</a> including your: </p>
+        <ul>
+            <li>phone number</li>
+            <li>email address</li>
+            <li>home address</li>
+            <li>Passport or other identity documents, including change of name or nationality</li>
+        </ul>
+
+        <h3>If there is an error on your eVisa</h3>
+        <p>If any of the information is wrong, you can <a class="a">report an error with your eVisa</a></p>
+    </div>
+
+    <div class="six">
+        <h2>Before you travel</h2>
+        <p>You may be delayed or denied boarding by carriers if you have not added the passport or identity document you are travelling with to your account.</p>
+        <p>Use the <a class="a">update your UKVI account details service</a> to add a passport or identity document to your account.</p>
+    </div>
+
+    <div class="seven">
+        <h2>Nationality Information</h2>
+        <p>When you add a passport or identity document to your account, the nationality on the newly added document will be displayed on your eVisa.</p>
+        <a class="a">Leave Service</a>
+    </div>
+  </div>
+
+  <div class="mainfooter">
+    <footer class="footer">
+      <div class="li">
+        <li><a>Help</a></li>
+        <li><a>Privacy</a></li>
+        <li><a>Cookies</a></li>
+        <li><a>Accessibilty Statement</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Terms and Conditions</a></li>
+        <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
+        <li><a>Government Digital Servise</a></li>
+      </div>
+      <div class="lastpart">
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <p>All content is available, except where otherwise stated</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

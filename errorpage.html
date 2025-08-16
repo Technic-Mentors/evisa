@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ErrorPage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: "Roboto Slab", serif; }
+
+    .main { width: 50%; padding: 20px; padding-left: 150px; }
+    .sign { color: grey; }
+
+    .info-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .vertical-line {
+      border-left: 13px solid grey;
+      margin-right: 20px;
+    }
+
+    .info-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .btn {
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-bottom: 2px solid black;
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-top: 35px;
+      cursor: pointer;
+    }
+    .btn a { text-decoration: none; color: white; }
+
+    .mainfooter{
+      width: 75%;
+      padding: 20px;
+      padding-left: 150px;
+    }
+
+    .footer{
+      list-style: none;
+      display: flex;
+      flex-direction: column; 
+      background-color: #f5f9fc;
+      padding: 15px;
+    }
+
+    .li{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 10px;
+      padding: 0px;
+      font-size: 18px;
+      row-gap: 0px;
+    }
+    .li li{ margin: 1.5px; } 
+
+    .footer a {
+      color: black;
+      text-decoration: underline;
+    }
+    .footer a:hover { cursor: pointer; }
+
+    .lastpart {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 15px;
+    }
+    .lastpart svg { margin-top: 22px; }
+    .lastpart p { margin: 6px 0 0; }
+
+    .detailtext a{
+      text-decoration: underline;
+      color: blue;
+    }
+    .detailtext a:hover{ cursor: pointer; }
+
+    .info{font-size: 20px;}
+
+    .info-contentsecond{
+        row-gap: 0px;
+    }
+    
+    .info-contentthird{
+        row-gap: 0px;
+
+    }
+
+    .details u{
+        color: blue;
+    }
+
+    .details u:hover{cursor: pointer;}
+
+    .a{         color: blue;
+        text-decoration: underline;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="mainheading">
+      <h1>The details entered do not match our records</h1>
+    </div>
+
+    <div class="info-container">
+      <div class="vertical-line"></div>
+
+      <div class="info">
+
+      <div class="info-contentsecond">
+        <h3>Passport number</h3>
+        <p>DX3497093</p>
+      </div>
+
+      <div class="info-contentthird">
+        <h3>Date of birth</h3>
+        <p>13 September 1977</p>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="fourth">
+      <h2>Check you are using the right identity document</h2>
+      <h4>If you have updated your identity document</h4>
+      <p>The document you need to sign in is the most recent one you added to your account.</p>
+      <h4>If you have updated your identity document</h4>
+      <p>The document you need to sign in is the one you used to create your account.</p>
+
+      <details class="details">
+        <summary class="details__summary">
+          <span class="details__summary-text">
+            <u aria-label="If your details are correct and you still cannot sign in" role="complementary">If your details are correct and you still cannot sign in</u>
+          </span>
+        </summary>
+        <div class="detailtext">
+          <p class="govuk-body">You did not create a UKVI account when you applied for your visa. This means there are different ways for you to:</p>
+          <ul class="list list-bullet">
+            <li><a> access your eVisa</a> - you will need to create a UKVI account and link it to your eVisa</li>
+            <li><a> continue an application</a> you have started already</li>
+            <li><a>prove your right to work</a> or <a> right to rent </a> - make sure you sign in without a UKVI account</li>
+            <li><a>update your details </a></li>
+            <li><a>start a new application </a> - create a new UKVI account if we tell you that you need one to apply</li>
+          </ul>
+        </div>
+      </details>
+
+      <p>If there is still a problem, contact <a class="a">UK Visas and Immigration.</a></p>
+    </div>
+    
+    <button class="btn"><a href="firstoption.html">Try Again</a></button>
+  </div>
+
+  <div class="mainfooter">
+    <footer class="footer">
+      <div class="li">
+        <li><a>Help</a></li>
+        <li><a>Privacy</a></li>
+        <li><a>Cookies</a></li>
+        <li><a>Accessibilty Statement</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Terms and Conditions</a></li>
+        <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
+        <li><a>Government Digital Servise</a></li>
+      </div>
+      <div class="lastpart">
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <p>All content is available, except where otherwise stated</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

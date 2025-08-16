@@ -1,78 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="imges\crown.png" type="image/png">
-  <title>Residence Documents Guidance</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <header class="top-header">
-    <p class="guidance">Guidance</p>
-    <h1>Residence documents: information for financial providers</h1>       
-    <p class="updated">Updated 27 November 2024</p>
-  </header>
-  <div class="content-wrapper">
-    <aside class="sidebar">
-      <h3>Contents</h3>
-      <ul>
-        <li><a href="#">Online evidence of identification and immigration status (eVisa)</a></li>
-        <li><a href="#" class="purple-link">Physical evidence of immigration status</a></li>
-      </ul>
-      <button class="print-btn">🖨️ Print this page</button>
-    </aside>
-    <main class="main-content">
-      <h2>Online evidence of identification and immigration status (eVisa)</h2>
-      <h3>General information for completion of Know Your Customer (KYC) checks</h3>
-      <p>
-        When making KYC checks, customers may provide proof of identity and immigration
-        status from a range of options that include:
-        <li>eVisa – digital evidence of immigration status</li>
-        <li>all signed passports, with a valid UK entry clearance where applicable</li>
-        <li>all signed Home Office Travel documents</li>
-        <li>Home Office Immigration Status Document</li>
-        <li>a valid Biometric Residence Permit (BRP)</li>
-        <li>Biometric Residence Card (BRC)</li>
-        <li>Frontier Worker Permit (FWP)</li><br>
-        This guidance offers information to account providers about the transition from BRPs and BRCs to eVisas.
-      </p>
-      <h2>We are replacing BRPs and BRCs with eVisas</h2>
-      <p>Since 2018, UK Visa and Immigration (UKVI) has gradually replaced physical immigration documents with digital proof of immigration status in the form of an eVisa, for customers already living in the UK and new visa customers too. In addition to showing the person’s immigration status, eVisas can also be used for identification purposes<br><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+      body {font-family: "Roboto Slab", serif;
+      }
+      p,
+      li {
+        font-weight: normal;
+      }
+      .list li{
+        list-style-type: none;
+      }
 
-        Since 2018 we have rolled out eVisas incrementally across different immigration routes, both for in country and out of country applications. By 2025, almost all physical immigration products and services will be replaced with an eVisa.<br><br>
+      .contents-list {
+      list-style: none;
+      padding-left: 0;
+     }
+     .contents-list li::before {
+    content: "— "; 
+    position: absolute; 
+    left: 0;
+    top: 0;
+    color: black;
+    letter-spacing: -3px; 
+}
 
-        The Home Office stopped issuing biometric physical immigration documents, in the form of BRPs and BRCs, from 31 October 2024 and most BRPs will expire on 31 December 2024. Most BRCs and FWP cards will also expire at the end of this year, but a small number of BRPs and BRCs issued before 2021 may show a later expiry date.<br><br>
+.contents-list li {
+    position: relative;
+    padding-left: 1.5em; 
+    margin-bottom: 0.4em; 
+}
+.contents-list a {
+    color: #1d70b8;
+    /* text-decoration: none; */
+}
+.contents-list a:hover {
+    text-decoration: underline;
+}
 
-        Where an individual holds a BRP or BRC that expires on the 31 December 2024, this expiry date refers to the document only, and not to the expiry date of the holder’s immigration status. However, how they prove their identity and immigration status will change from 2025 and they should take action to create a UKVI account to access their eVisa before their BRP expires. There is no need to recheck the status of an individual solely because their BRP or BRC expires on the 31 December 2024.<br><br>
+li{
+  margin: 13px;
+}
+      
+main {
+        /* border: 2px solid black; */
+        width: 50%;
+        padding: 20px;
+        padding-left: 150px;
+      }
+.mainheading h1 {
+        /* font-weight: normal; */
+        font-size: 40px;
+        margin-bottom: 55px;
+      }
 
-        The transition to eVisas is already underway, with millions of customers already receiving them.<br><br>
+      h3{
+        margin-top: 36px;
+      }
+abbr {
+        text-decoration: none;
+      }
+.btn {
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: 20px;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .btn a {
+        text-decoration: none;
+        color: white;
+      }
+      .beforeFooterContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f5f9fc;
+        padding: 15px 20px;
+        border: 1px solid #d1d5da;
+      }
 
-        The transition to digital documents/eVisas will continue into 2025 when we will stop issuing stamps/vignettes in passports too.<br><br>
-         You can find more information about eVisas.<br><br>
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .button {
+        padding: 6px 16px;
+        border: 1px solid black;
+        border-bottom: 3px solid black;
+        background-color: white;
+        cursor: pointer;
+      }
 
-         Status holders can create a UKVI account to access their eVisa.</p><br><br>
-         <h2>What is an eVisa?</h2>
-         <p>An eVisa is an online record of a customer’s immigration permission in the UK, and any conditions which apply, which can be viewed by logging into the ‘view and prove’ service using their UK Visas and Immigration (UKVI) account. A customer can also link their travel document (such as passport) to their UKVI account to facilitate straightforward international travel.<br><br>
-         The UKVI account provides customers with the ability to use online services to ‘view and prove’ their immigration status, including their rights to rent, work, study and access public services, by sharing relevant information about their permissions in the UK.<br><br>
-         The eVisa is an identification document for the purposes of section 7 of the Identity Documents Act 2010. It includes the person’s name, date of birth and nationality, which are essential to establishing their identity.<br><br>
-         To check a person’s identity using an eVisa, you need to go to the online ‘check someone’s immigration status’ service.<br><br>
+      .button:hover {
+        background-color: #f0f0f0;
+      }
 
-         More information about the eVisa is available on GOV.UK.</p><br>
-         <h2>eVisa image from the online ‘view and prove your immigration status’ service</h2>
-         <img src="imges/hamas butt .jpg" alt="" style="width:550px; height:800px;"><br><br>
-         <h2>How can an eVisa be used to prove an individual’s identity?</h2><br><br>
-         <p>Financial institutions and others can check someone’s identity, if they have their share code and the individual’s date of birth, using the online ‘check someone’s immigration status’ service. The digital system has the benefit of providing real time information about the individual’s current immigration status, direct from Home Office systems. It also enables checks to be conducted without physical documents changing hands. <br><br>
-        The Joint Money Laundering Steering Group (JMLSG) guidance makes it clear that firms can use electronic sources to verify a customer’s identity, provided that they have both (i) verified that the customer (and where appropriate, beneficial owner) exists and (ii) satisfied themselves that the applicant seeking the business relationship is, in fact, that customer (or beneficial owner).<br><br>
-    The Joint Money Laundering Steering Group (JMLSG) guidance makes it clear that firms can use electronic sources to verify a customer’s identity, provided that they have both (i) verified that the customer (and where appropriate, beneficial owner) exists and (ii) satisfied themselves that the applicant seeking the business relationship is, in fact, that customer (or beneficial owner).<br><br>
-This is part of the Home Office’s plans to develop a border and immigration system which will be digital by default, which means we will increasingly replace physical and paper-based products and services for all routes with accessible, easy to use online and digital services.<br><br>
-For the purposes of this guidance, individuals with an eVisa, BRP, BRC or FWP can present their document for the purpose of identity checks. More detail on the design and security features of BRP/Cs and FWPs to aid the checking of these documents is set out below.</p><br><br><br>
-<h2>How can an eVisa be used to prove an individual’s immigration status?<br><br></h2>
-<p>Individuals with an eVisa can evidence their identity and immigration status by using the online ‘view and prove your immigration status’ service to provide a time-limited code (‘share code’) to third parties such as landlords, employers and banks.</p>
-<h2>Physical evidence of immigration status</h2><br><br>
-<h3>Individuals still providing a BRP or BRC</h3>
-<p>We will stop issuing most BRPs and BRCs from Autumn 2024. However, some individuals may still provide a BRP or BRC to evidence their immigration status.</p>
+      .mainfooter{/* border: 2px solid black; */width: 75%;padding: 20px;padding-left: 150px;}
+
+      .footer {
+        list-style: none;
+        display: flex;
+        flex-direction: column; 
+        background-color: #f5f9fc;
+        padding: 15px;
+
+      }
+      .li {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        gap: 10px;
+        padding: 0px;
+        font-size: 16px;
+        row-gap: 0px;
+      }
+
+      .li li{ margin: 1.5px;}
+      
+      .lastpart svg{margin-top: 22px;}
+
+
+      .footer a {color: black;text-decoration: underline;}
+
+      .footer a:hover{
+        cursor: pointer;
+      }
+
+      #line{
+        height: 1px;    
+        border: none;   
+        margin: 0;   
+        background-color: #005eb8;
+      }
+
+      #blueline{
+       height: 7px;           
+       border: none;           
+       margin: 0;              
+       background-color: #005eb8;
+
+}
+
+#nonbold{
+  color: black;
+  text-decoration: none;
+}
+
+.anchor{
+  text-decoration: underline;
+}
+.contents a:hover{
+  cursor: pointer;
+
+}
+
+
+.mainfooter {width: 75%;padding: 20px;padding-left: 150px;}
+
+.footer {list-style: none;display: flex;flex-direction: column;background-color: #f5f9fc;padding: 20px;}
+
+.li {display: flex;flex-wrap: wrap;gap: 10px;row-gap: 0;padding: 0;font-size: 16px;}
+
+.li li {  margin: 0;}
+
+.lastpart {display: flex;align-items: center;justify-content: space-between;}
+
+.beforeFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f9fc;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.beforeFooterContainer .left {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.beforeFooterContainer h2 {
+  margin: 0;
+}
+
+.beforeFooterContainer .button {
+  display: flex;
+  gap: 10px;
+}
+
+.beforeFooterContainer .button .btn {
+  background: #1d70b8;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.beforeFooterContainer .button .btn:hover {
+  background: #003078;
+}
+
+.lastpart p{
+  display: block;
+}
+.lastpart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.lastpart svg { margin-top: 22px; }
+.lastpart p { margin: 6px 0 0; }
+
+
+
+@media (max-width: 1024px) {
+  .mainfooter {
+    width: 90%;
+    padding-left: 20px;
+  }
+
+  .beforeFooterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainfooter {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .beforeFooterContainer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .beforeFooterContainer .left {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .beforeFooterContainer .button {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .beforeFooterContainer .button .btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .lastpart {
+    display: block;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .beforeFooterContainer {
+    padding: 15px;
+  }
+
+  .beforeFooterContainer h2 {
+    font-size: 20px;
+  }
+
+  .beforeFooterContainer .button .btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .lastpart svg {
+    margin-top: 10px;
+    height: 14px;
+    width: 35px;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="mainheading">
+        <h1>eVisas: access and use your online immigration status</h1>
+      </div>
+
+      <div class="contents">
+        <div class="list">
+          <h3>Contents</h3>
+          <ul class="contents-list">
+            <li> <a class = "anchor">What an eVisa is</a></li>
+            <li>
+              <a class = "anchor">Set up a
+              <abbr title="UK Visas and Immigration">UKVI</abbr> account to
+              access your eVisa </a>
+            </li>
+            <li>
+              <a id = "nonbold"
+                >View your eVisa and get a share code to prove your immigration
+                status</a
+              >
+            </li>
+            <li><a class = "anchor">Travel with your eVisa </a></li>
+            <li>
+              <a class ="anchor">Update your details in your
+              <abbr title="UK Visas and Immigration">UKVI</abbr> account</a>
+            </li>
+            <li><a class = "anchor">Report an error with your eVisa</a></li>
+          </ul>
+        </div>
+        <hr />
+
+        <div class="secondHeading">
+          <h2>
+            View your eVisa and get a share code to prove your immigration
+            status
+          </h2>
+          <p>
+            Your eVisa shows your identity and immigration status. This includes
+            what rights you have in the UK, for example to work, rent or claim
+            benefits.
+          </p>
+          <p>
+            You can get a share code to prove your immigration status to people
+            such as employers or landlords, or when you travel.
+          </p>
+          <p>
+            You’ll need to give them your date of birth. You will not need to
+            show them your eVisa.
+          </p>
+          <p>
+            The person who uses your share code will see some of your personal
+            details. When you get your share code you’ll be told what they’ll
+            see.
+          </p>
+          <p>A share code lasts for 90 days. You can:</p>
+          <ul>
+            <li>
+              use the share code as many times as you need before it expires
+            </li>
+            <li>get a new share code whenever you need one</li>
+          </ul>
+        </div>
+
+        <div class="thirdheading">
+          <h3>View your eVisa and get a share code</h3>
+          <p>
+            You’ll need the details you use to sign in to your UKVI account.
+            This could be your:
+          </p>
+          <ul>
+            <li>passport</li>
+            <li>national identity card</li>
+            <li>
+              biometric residence card (BRC) - this can be valid or expired
+            </li>
+            <li>expired biometric residence permit (BRP)</li>
+            <li>UKVI customer number</li>
+          </ul>
+          <p>
+            You’ll also need access to the mobile phone number or email address
+            you use to sign in to your UKVI account.
+          </p>
+        </div>
+
+        <button class="btn">
+          <a href="firstoption.html">View your eVisa and get a share code</a> >
+        </button>
+
+        <div class="error">
+          <h3>Report an error with your eVisa</h3>
+          <p>You should report an error with your eVisa if:</p>
+          <ul>
+            <li>
+              your eVisa is wrong - for example it’s showing the wrong date of
+              birth or immigration status
+            </li>
+            <li>
+              you can view your eVisa but you cannot use it to get a share code
+            </li>
+          </ul>
+        </div>
+
+        <div class="updation">
+          <h3>Update your details before you get a share code</h3>
+          <p>
+            You should update your UKVI account before you get a share code if:
+          </p>
+          <ul>
+            <li>you’ve changed your name or nationality</li>
+            <li>
+              you need to change your photo because you cannot be recognised
+              from the current one
+            </li>
+          </ul>
+        </div>
+
+        <div class="cannotview">
+          <h3>If you cannot view your eVisa</h3>
+          <p>
+            Check that you have finished setting up your UKVI account to access
+            your eVisa.
+          </p>
+          <p>
+            You can use different services to prove your right to work or prove
+            your right to rent if you cannot access an eVisa.
+          </p>
+        </div>
+
+        <div class="gethelp">
+          <h3>Get Help</h3>
+          <p>
+            You can get help to recover your UKVI account if you’re having
+            problems signing in to view your eVisa.
+          </p>
+          <p>
+            Contact UKVI online if you have other questions about your eVisa or
+            UKVI account.
+          </p>
+          <p>You can also watch eVisa support videos.</p>
+        </div>
+
+        <nav
+          aria-label="Pagination"
+          class="govuk-pagination govuk-pagination--block"
+        >
+          <div class="govuk-pagination__prev">
+            <span class="govuk-pagination__link as-text">
+              <svg
+                class="govuk-pagination__icon govuk-pagination__icon--prev"
+                xmlns="http://www.w3.org/2000/svg"
+                height="13"
+                width="15"
+                aria-hidden="true"
+                focusable="false"
+                viewBox="0 0 15 13"
+              >
+                <path
+                  d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"
+                ></path>
+              </svg>
+              <span class="govuk-pagination__link-title">Previous</span>
+              
+              <span class="govuk-visually-hidden">:</span>
+              <span class="govuk-pagination__link-label"
+                >Set up a UKVI account to access your eVisa</span
+              >
+            </span>
+            <hr>
+          </div>
+
+          <div class="govuk-pagination__next">
+            <span class="govuk-pagination__link as-text">
+              <svg
+                class="govuk-pagination__icon govuk-pagination__icon--next"
+                xmlns="http://www.w3.org/2000/svg"
+                height="13"
+                width="15"
+                aria-hidden="true"
+                focusable="false"
+                viewBox="0 0 15 13"
+              >
+                <path
+                  d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"
+                ></path>
+              </svg>
+              <span class="govuk-pagination__link-title">Next</span>
+              <span class="govuk-visually-hidden">:</span>
+              <span class="govuk-pagination__link-label"
+                >Travel with your eVisa</span
+              >
+            </span>
+          </div>
+        </nav>
+
+        <p>View a printable version of the whole guide</p>
+        <hr id = "line">
+        <h4>Explore the topic</h4>
+        <p>What you need to do</p>
+
+      </div>
     </main>
-  </div>
-</body>
+<div class="mainfooter">
+
+
+    <div class="beforeFooterContainer">
+      <div class="left">
+        <p><strong>Is this page useful?</strong></p>
+        <button class="button">Yes</button>
+        <button class="button">No</button>
+      </div>
+      <div class="right">
+        <button class="button">Report a problem with this page</button>
+      </div>
+    </div>
+    </div>
+
+<hr id = "blueline">
+
+<div class="mainfooter">
+
+    <footer class="footer">
+      <div class="li">
+        <li><a >Help</a></li>
+        <li><a >Privacy</a></li>
+        <li><a >Cookies</a></li>
+        <li><a >Accessibilty Statement</a></li>
+        <li><a > Contact </a></li>
+        <li><a >Terms and Conditions</a></li>
+        <li><a >Rhestr o Wasanaethau Cymraeg</a></li>
+        <li><a >Government Digital Servise</a></li>
+
+
+      </div>
+      <div class="lastpart">
+<svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+            <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+          </svg>        <p>All content is available, except where otherwise stated</p>
+      </div>
+    </footer>
+    </div>
+    </div>
+  </body>
 </html>
