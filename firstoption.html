@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UKVI-style Responsive Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* ----------------------
@@ -17,15 +15,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   font-family: "Roboto Slab", serif;
-}
-
-body {
   background-color: #fff;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* ----------------------
@@ -34,19 +29,19 @@ body {
 .content {
   flex: 1;
   max-width: 900px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
 .content h1 {
-  font-size: clamp(2.1rem, 2.5vw, 2rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
   margin-bottom: 1rem;
 }
 
 .content p {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
   margin-bottom: 2rem;
   color: #555;
 }
@@ -63,7 +58,7 @@ body {
 .option {
   display: flex;
   align-items: center;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   cursor: pointer;
 }
 
@@ -72,9 +67,9 @@ body {
 }
 
 .option span {
-  width: clamp(1rem, 2vw, 1.5rem);
-  height: clamp(1rem, 2vw, 1.5rem);
-  border: 0.15rem solid black;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid black;
   border-radius: 50%;
   margin-right: 0.75rem;
   transition: all 0.3s ease;
@@ -89,21 +84,18 @@ body {
    BUTTON
 ------------------------*/
 .btn {
+  display: inline-block;
   background-color: green;
   color: white;
   font-weight: bold;
   border: none;
-  border-bottom: 0.15rem solid black;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  border-bottom: 3px solid black;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 0.75rem 1.5rem;
   margin-top: 2rem;
   cursor: pointer;
-}
-
-.btn a {
+  text-align: center;
   text-decoration: none;
-  color: white;
-  display: block;
 }
 
 /* ----------------------
@@ -111,10 +103,9 @@ body {
 ------------------------*/
 footer {
   background-color: #f5f9fc;
-  width: 83vw;
-  padding: 5vh 2vw; /* grows vertically with viewport/zoom */
+  width: 100%;
+  padding: 2rem 1rem;
   box-sizing: border-box;
-  margin-left: 20vh ;
 }
 
 .footer-content {
@@ -122,7 +113,7 @@ footer {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2vh; /* vertical spacing scales */
+  gap: 1.5rem;
 }
 
 .footer-links {
@@ -131,42 +122,25 @@ footer {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 2vw;
+  gap: 1rem 2rem;
   font-size: 1rem;
-  row-gap: 0;
-  margin-top: 30px;
-  column-gap: 9.5px;
-
-}
-
-.footer-links li {
-  column-gap: 0;
-  margin: 0;
-  text-decoration: underline;
-  row-gap: 0;
-
 }
 
 .footer-links a {
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .footer-licence {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  justify-content: flex-start;
   font-size: 0.9rem;
-  row-gap: 0;
 }
 
 .footer-licence svg {
   margin-top: 10px;
-  width: 4vw;  /* grows with viewport */
+  width: 60px;
   height: auto;
-  margin-bottom: 0vh;
 }
 
 /* ----------------------
@@ -174,10 +148,9 @@ footer {
 ------------------------*/
 @media (max-width: 600px) {
   .content { width: 95%; padding: 1rem; }
-  .btn { width: 100%; text-align: center; }
-  footer{margin: auto;}
-  .footer-links { flex-direction: column; align-items: flex-start;  }
-  .footer-licence svg { width: 20vw; } /* scale on mobile */
+  .btn { width: 100%; }
+  .footer-links { flex-direction: column; align-items: flex-start; }
+  .footer-licence svg { width: 80px; }
 }
 </style>
 </head>
@@ -206,21 +179,21 @@ footer {
         <span></span>I use a UKVI customer number
       </label>
     </div>
-    <button class="btn"><a href="secondoption.html">Continue</a></button>
+    <button type="submit" class="btn">Continue</button>
   </form>
 </div>
 
 <footer>
   <div class="footer-content">
     <ul class="footer-links">
-      <li><a >Help</a></li>
-      <li><a>Privacy</a></li>
-      <li><a >Cookies</a></li>
-      <li><a >Accessibility Statement</a></li>
-      <li><a >Contact</a></li>
-      <li><a >Terms and Conditions</a></li>
-      <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
-      <li><a>Government Digital Service</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+      <li><a href="#">Accessibility Statement</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Rhestr o Wasanaethau Cymraeg</a></li>
+      <li><a href="#">Government Digital Service</a></li>
     </ul>
     <div class="footer-licence">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">

@@ -24,24 +24,26 @@ html, body {
 .main {
   flex: 1;
   max-width: 900px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
 }
 
 .main h1 {
-  font-size: clamp(4rem, 4vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
 }
 
 .main h2, .main h3, .main h4 {
   margin: 0.3rem 0 0.5rem;
   color: #333;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .main p {
   margin: 0.2rem 0 1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 .main a {
@@ -58,6 +60,8 @@ html, body {
   cursor: pointer;
   display: block;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -65,7 +69,6 @@ html, body {
   color: white;
   font-weight: bold;
   border-bottom: 0.15rem solid black;
-  width: 100%;
 }
 
 .btn a {
@@ -77,11 +80,9 @@ html, body {
 /* ------------------ IMAGE & ROTATE BUTTON ------------------ */
 .img {
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   width: 100%;
-  margin: auto;
-
-  max-width: 600px; /* same as image max width */
+  max-width: 600px;
 }
 
 .img img {
@@ -94,17 +95,13 @@ html, body {
   background-color: #f5f5f5;
   color: black;
   border: none;
-  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
-  margin: 1rem 0;
   cursor: pointer;
-  width: 100%; /* full width of image container */
-  box-sizing: border-box;
 }
 
 /* ------------------ HR LINES ------------------ */
 .main hr {
-  width: 100%;       /* fill parent width */
-  max-width: 60vw;   /* your desired max width */
+  width: 100%;
+  max-width: 600px;
   margin: 0.5rem 0;
   border: 1px solid #000;
   box-sizing: border-box;
@@ -113,10 +110,10 @@ html, body {
 /* ---------------------- FOOTER ---------------------- */
 footer {
   background-color: #f5f9fc;
-  padding: 3vh 2vw;
-  width: 83vw;
+  padding: 2rem 1rem;
+  width: 100%;
   box-sizing: border-box;
-  margin-left: 20vh;
+  margin-top: auto;
 }
 
 .footer-content {
@@ -131,11 +128,9 @@ footer {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 2vw;
+  gap: 1rem;
   padding: 0;
   margin: 0;
-  row-gap: 0;
-  column-gap: 9.5px;
 }
 
 .footer-links li {
@@ -145,45 +140,39 @@ footer {
 .footer-links a {
   text-decoration: underline;
   color: black;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .footer-licence {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: flex-start;
 }
 
 .footer-licence svg {
-  width: 4vw;
+  width: clamp(80px, 15vw, 120px);
   height: auto;
 }
 
 .footer-licence p {
   margin: 0;
-}
-
-.h {
-  width: 60vw;
-  margin-left: 0;
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 /* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 768px) {
-  .main { width: 90%; padding: 1.5rem; }
-  .btn, .butn { width: 100%; }
-  .img img { width: 100%; }
-  .main hr { max-width: 90%; }
+  .main { width: 95%; padding: 1.5rem; }
+  .footer-links { justify-content: center; }
+  .footer-licence { align-items: center; text-align: center; }
 }
 
 @media (max-width: 480px) {
-  .main { width: 95%; padding: 1rem; }
-  .main h1 { font-size: 2rem; }
-  .main h2, .main h3, .main h4 { font-size: 1rem; }
-  .btn, .butn { font-size: 1rem; padding: 0.5rem 1rem; }
-  .img img { width: 100%; height: auto; }
-  footer { margin: auto; }
-  .footer-links { flex-direction: column; gap: 0.5rem; }
-  .footer-licence svg { width: 20vw; }
+  .main { width: 100%; padding: 1rem; }
+  .main h1 { font-size: 1.8rem; }
+  .btn, .butn { font-size: 0.95rem; padding: 0.6rem; }
+  .footer-links { flex-direction: column; gap: 0.5rem; align-items: center; }
+  .footer-licence { align-items: center; text-align: center; }
 }
 </style>
 </head>

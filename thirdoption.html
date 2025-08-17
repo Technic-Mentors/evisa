@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ThirdOption</title>
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
 <style>
 /* ----------------------
@@ -31,19 +31,19 @@ html, body {
 .content {
   flex: 1;
   max-width: 900px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
 .content h1 {
-  font-size: clamp(2.1rem, 2.5vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   margin-bottom: 1rem;
 }
 
 .content p {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   margin-bottom: 1rem;
   color: #555;
 }
@@ -54,25 +54,29 @@ html, body {
 .dob-container {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
 
 .dob-field {
+  flex: 1;
+  min-width: 80px;
   display: flex;
   flex-direction: column;
 }
 
 .dob-field label {
   margin-bottom: 0.3rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .dob-field input {
-  padding: 5px;
-  width: 80px;
+  padding: 8px;
   border: 1.5px solid black;
   font-size: 1rem;
+  border-radius: 4px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 /* ----------------------
@@ -84,10 +88,17 @@ html, body {
   font-weight: bold;
   border: none;
   border-bottom: 0.15rem solid black;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 0.7rem 1.5rem;
   margin-top: 2rem;
   cursor: pointer;
+  width: fit-content;
+  border-radius: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #056105;
 }
 
 .btn a {
@@ -101,10 +112,9 @@ html, body {
 ------------------------*/
 footer {
   background-color: #f5f9fc;
-  width: 83vw;
-  padding: 5vh 2vw;
+  width: 100%;
+  padding: 2rem 1rem;
   box-sizing: border-box;
-  margin-left: 20vh;
 }
 
 .footer-content {
@@ -112,7 +122,7 @@ footer {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 1.5rem;
 }
 
 .footer-links {
@@ -121,41 +131,30 @@ footer {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 2vw;
-  font-size: 1rem;
-  margin-top: 30px;
-  row-gap: 0px;
-    column-gap: 9.5px;
-
+  gap: 1rem;
+  font-size: 0.95rem;
 }
 
 .footer-links li {
   margin: 0;
-  text-decoration: underline;
 }
 
 .footer-links a {
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .footer-licence {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .footer-licence svg {
   margin-top: 10px;
-  width: 4vw;
+  width: 120px;
+  max-width: 30%;
   height: auto;
-  margin-bottom: 0vh;
-}
-
-.footer-licence p {
-  margin-top: 0.3rem;
 }
 
 /* ----------------------
@@ -164,11 +163,9 @@ footer {
 @media (max-width: 600px) {
   .content { width: 95%; padding: 1rem; }
   .btn { width: 100%; text-align: center; }
-  footer { margin: auto; }
-  .footer-links { flex-direction: column; align-items: flex-start; }
-  .footer-licence svg { width: 20vw; }
   .dob-container { flex-direction: column; gap: 0.75rem; }
-  .dob-field input { width: 100%; }
+  .footer-links { flex-direction: column; align-items: flex-start; }
+  .footer-licence svg { width: 40%; }
 }
 </style>
 </head>

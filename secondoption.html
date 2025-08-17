@@ -6,8 +6,7 @@
 <title>SecondOption</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* ----------------------
@@ -30,34 +29,35 @@ html, body {
 .content {
   flex: 1;
   max-width: 900px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
 .content h1 {
-  font-size: clamp(2.1rem, 2.5vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   margin-bottom: 1rem;
 }
 
 .content p {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-  margin-bottom: 2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  margin-bottom: 1rem;
 }
 
 /* ----------------------
    INPUT FIELD
 ------------------------*/
 .inputtype input {
-  width: 80%;
-  height: 35px;
-  padding: 5px;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  padding: 0.5rem;
   font-size: 1rem;
   border: 1.5px solid black;
   box-sizing: border-box;
   margin-top: 0.5rem;
-  display: block;
+  border-radius: 4px;
 }
 
 /* ----------------------
@@ -70,9 +70,10 @@ html, body {
   border: none;
   border-bottom: 0.15rem solid black;
   font-size: clamp(1rem, 2vw, 1.25rem);
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  padding: 0.75rem 1.5rem;
   margin-top: 2rem;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .btn a {
@@ -86,10 +87,9 @@ html, body {
 ------------------------*/
 footer {
   background-color: #f5f9fc;
-  width: 83vw;
-  padding: 5vh 2vw;
+  width: 100%;
+  padding: 2rem 1rem;
   box-sizing: border-box;
-  margin-left: 20vh;
 }
 
 .footer-content {
@@ -97,7 +97,7 @@ footer {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 1.5rem;
 }
 
 .footer-links {
@@ -107,54 +107,27 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 2vw;
-  font-size: 1rem;
-  margin-top: 30px;
-  column-gap: 9.5px;
-  row-gap: 0;
-
-
+  gap: 1rem;
+  font-size: 0.95rem;
 }
 
-.footer-links li { 
-  margin: 0;   
-  text-decoration: underline; 
-  column-gap: 0; 
-  row-gap: 0;
-}
+.footer-links li { text-decoration: underline; }
 .footer-links a { color: black; text-decoration: none; }
 
 .footer-licence {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  font-size: 0.9rem;
-  row-gap: 0;
+  font-size: 0.85rem;
 }
 
 .footer-licence svg {
   margin-top: 10px;
-  width: 4vw;
+  width: 100px;
   height: auto;
-  margin-bottom: 0vh;
-
 }
 
-.footer-licence p { margin-top: 0.3rem; }
-
-.text{
-  margin-top: 7vh;
-
-}
-.p{
-  color: rgb(116, 114, 114);
-}
-
-.text p {
-  margin: 1vh; /* removes all spacing */
-  margin-left: 0;
-}
-
+.text { margin-top: 1rem; }
+.p { color: rgb(116, 114, 114); }
 
 /* ----------------------
    RESPONSIVE MOBILE
@@ -162,27 +135,26 @@ footer {
 @media (max-width: 600px) {
   .content { width: 95%; padding: 1rem; }
   .btn { width: 100%; text-align: center; }
-  footer { margin: auto; }
-  .footer-links { flex-direction: column; align-items: flex-start; }
-  .footer-licence svg { width: 20vw; }
+  .inputtype input { max-width: 100%; }
+  .footer-links { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .footer-licence svg { width: 80px; }
 }
 </style>
 </head>
 <body>
 
 <div class="content">
-  <!-- <div class="text"> -->
   <h1>What is your passport number?</h1>
-    <div class="text">
-  <p>Passport Number </p>
-  <p class = "p">For example: 120382978</p>
+  <div class="text">
+    <p>Passport Number</p>
+    <p class="p">For example: 120382978</p>
   </div>
 
   <label class="inputtype" for="passportInput">
     <input type="text" name="passportInput" id="passportInput">
   </label>
 
-  <button class="btn" onclick="savePassport()"><a href="thirdoption.html">Continue</a></button>
+  <button class="btn" onclick="savePassport()">Continue</button>
 </div>
 
 <footer>
