@@ -1,216 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thirdoption</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThirdOption</title>
 
-  <style>
-    body {
-      font-family: "Roboto Slab", serif;
-      margin: 0;
-      padding: 0;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    .sign {
-      color: grey;
-    }
+<style>
+/* ----------------------
+   GLOBAL STYLES
+------------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab", serif;
+  background-color: #fff;
+  line-height: 1.4;
+}
 
-    .main {
-      width: 50%;
-      padding: 20px;
-      padding-left: 180px;
-    }
+/* ----------------------
+   MAIN CONTENT
+------------------------*/
+.content {
+  flex: 1;
+  max-width: 900px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 
-    .second {
-      color: grey;
-      font-size: 18px;
-    }
+.content h1 {
+  font-size: clamp(2.1rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+}
 
-    .dob-container {
-      display: flex;
-      column-gap: 20px;
-      margin-top: 15px;
-    }
+.content p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  margin-bottom: 1rem;
+  color: #555;
+}
 
-    .dob-field {
-      display: flex;
-      flex-direction: column;
-    }
+/* ----------------------
+   INPUT FIELDS (DOB)
+------------------------*/
+.dob-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 
-    .dob-field label {
-      margin-bottom: 5px;
-      font-size: 17px;
-    }
+.dob-field {
+  display: flex;
+  flex-direction: column;
+}
 
-    .dob-field input {
-      padding: 5px;
-      width: 70px;
-      border: 2px solid black;
-      height: 25px;
-    }
+.dob-field label {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
 
-    #day,
-    #month {
-      width: 55px;
-    }
+.dob-field input {
+  padding: 5px;
+  width: 80px;
+  border: 1.5px solid black;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
 
-    .btn {
-      background-color: green;
-      color: white;
-      font-weight: bold;
-      border: none;
-      font-size: 20px;
-      padding: 10px 20px;
-      margin-top: 35px;
-      cursor: pointer;
-    }
+/* ----------------------
+   BUTTON
+------------------------*/
+.btn {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-bottom: 0.15rem solid black;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  margin-top: 2rem;
+  cursor: pointer;
+}
 
-    .btn a {
-      text-decoration: none;
-      color: white;
-    }
+.btn a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
 
-    /* Footer CSS */
-    .mainfooter {
-      width: 60%;
-      padding: 20px;
-      padding-left: 150px;
-      margin-top: 40px;
-    }
+/* ----------------------
+   FOOTER
+------------------------*/
+footer {
+  background-color: #f5f9fc;
+  width: 83vw;
+  padding: 5vh 2vw;
+  box-sizing: border-box;
+  margin-left: 20vh;
+}
 
-    .footer {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      background-color: #f5f9fc;
-      padding: 20px;
-    }
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
 
-    .li {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      row-gap: 0px;
-      padding: 0px;
-      font-size: 16px;
-    }
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2vw;
+  font-size: 1rem;
+  margin-top: 30px;
+  row-gap: 0px;
+    column-gap: 9.5px;
 
-    .li li {
-      margin: 0;
-    }
+}
 
-    .footer a {
-      color: black;
-      text-decoration: underline;
-    }
+.footer-links li {
+  margin: 0;
+  text-decoration: underline;
+}
 
-    .footer a:hover {
-      cursor: pointer;
-    }
+.footer-links a {
+  color: black;
+  text-decoration: none;
+}
 
-    .lastpart {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: 20px;
-    }
+.footer-licence {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+}
 
-    .lastpart svg {
-      margin-top: 22px;
-    }
+.footer-licence svg {
+  margin-top: 10px;
+  width: 4vw;
+  height: auto;
+  margin-bottom: 0vh;
+}
 
-    .lastpart p {
-      margin: 6px 0 0;
-    }
+.footer-licence p {
+  margin-top: 0.3rem;
+}
 
-    /* ---------------- Responsive ---------------- */
-    @media (max-width: 1200px) {
-      .main {
-        width: 70%;
-        padding-left: 80px;
-      }
-      .mainfooter {
-        width: 90%;
-        padding-left: 80px;
-      }
-    }
-
-    @media (max-width: 992px) {
-      .main {
-        width: 85%;
-        padding-left: 40px;
-      }
-      .dob-container {
-        column-gap: 15px;
-      }
-      .mainfooter {
-        width: 95%;
-        padding-left: 40px;
-      }
-    }
-    @media (max-width: 768px) {
-      .main {
-        width: 100%;
-        padding: 20px;
-      }
-      .dob-container {
-        flex-direction: column;
-        row-gap: 12px;
-      }
-      .dob-field input {
-        width: 100%;
-      }
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-      .li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-      }
-      .mainfooter {
-        width: 100%;
-        padding: 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        font-size: 14px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .dob-field label {
-        font-size: 15px;
-      }
-      .dob-field input {
-        height: 30px;
-        font-size: 14px;
-      }
-      .footer {
-        padding: 10px;
-      }
-      .lastpart svg {
-        margin-top: 10px;
-        height: 14px;
-        width: 35px;
-      }
-    }
-  </style>
+/* ----------------------
+   RESPONSIVE MOBILE
+------------------------*/
+@media (max-width: 600px) {
+  .content { width: 95%; padding: 1rem; }
+  .btn { width: 100%; text-align: center; }
+  footer { margin: auto; }
+  .footer-links { flex-direction: column; align-items: flex-start; }
+  .footer-licence svg { width: 20vw; }
+  .dob-container { flex-direction: column; gap: 0.75rem; }
+  .dob-field input { width: 100%; }
+}
+</style>
 </head>
 <body>
 
-<div class="main">
-  <div class="mainheading"><h1>What is your date of birth?</h1></div>
-  <div class="second">
-    <p>You should enter this as shown on your passport. For example, 13 9 1977.</p>
-  </div>
+<div class="content">
+  <h1>What is your date of birth?</h1>
+  <p>You should enter this as shown on your passport. For example: 31 3 1980.</p>
 
   <div class="dob-container">
     <div class="dob-field">
@@ -227,13 +193,12 @@
     </div>
   </div>
 
-  <button class="btn" onclick="checkDOB()">Continue</button>
+  <button class="btn" onclick="checkDOB()"><a href="#">Continue</a></button>
 </div>
 
-<!-- Footer -->
-<div class="mainfooter">
-  <footer class="footer">
-    <div class="li">
+<footer>
+  <div class="footer-content">
+    <ul class="footer-links">
       <li><a>Help</a></li>
       <li><a>Privacy</a></li>
       <li><a>Cookies</a></li>
@@ -242,42 +207,38 @@
       <li><a>Terms and Conditions</a></li>
       <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
       <li><a>Government Digital Service</a></li>
-    </div>
-    <div class="lastpart">
-      <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo"
-        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-        <path fill="currentColor"
-          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145">
-        </path>
+    </ul>
+    <div class="footer-licence">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
       </svg>
       <p>All content is available, except where otherwise stated</p>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
 
 <script>
+function checkDOB() {
+  const passport = sessionStorage.getItem("passportNumber");
+  let day = parseInt(document.getElementById("day").value) || "--";
+  let month = parseInt(document.getElementById("month").value) || "--";
+  let year = parseInt(document.getElementById("year").value) || "--";
+
+  sessionStorage.setItem("enteredDay", day);
+  sessionStorage.setItem("enteredMonth", month);
+  sessionStorage.setItem("enteredYear", year);
+
   const correctPassport = "DX3497093";
   const correctDay = 13;
   const correctMonth = 9;
   const correctYear = 1977;
 
-  function checkDOB() {
-    const passport = sessionStorage.getItem("passportNumber");
-    const day = parseInt(document.getElementById("day").value);
-    const month = parseInt(document.getElementById("month").value);
-    const year = parseInt(document.getElementById("year").value);
-
-    if (
-      passport === correctPassport &&
-      day === correctDay &&
-      month === correctMonth &&
-      year === correctYear
-    ) {
-      window.location.href = "form.html";
-    } else {
-      window.location.href = "errorpage.html";
-    }
+  if (passport === correctPassport && day === correctDay && month === correctMonth && year === correctYear) {
+    window.location.href = "form.html";
+  } else {
+    window.location.href = "errorpage.html";
   }
+}
 </script>
 
 </body>

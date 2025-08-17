@@ -1,148 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SecondOption</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecondOption</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    body { font-family: "Roboto Slab", serif; }
+<style>
+/* ----------------------
+   GLOBAL STYLES
+------------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab", serif;
+  background-color: #fff;
+  line-height: 1.4;
+}
 
-    .mainfooter {
-      width: 75%;
-      padding: 20px;
-      padding-left: 150px;
-    }
+/* ----------------------
+   MAIN CONTENT
+------------------------*/
+.content {
+  flex: 1;
+  max-width: 900px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 
-    .footer {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      background-color: #f5f9fc;
-      padding: 15px;
-    }
+.content h1 {
+  font-size: clamp(2.1rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+}
 
-    .li {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      gap: 10px;
-      padding: 0px;
-      font-size: 18px;
-      row-gap: 0px;
-    }
+.content p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  margin-bottom: 2rem;
+}
 
-    .li li { margin: 1.5px; }
+/* ----------------------
+   INPUT FIELD
+------------------------*/
+.inputtype input {
+  width: 80%;
+  height: 35px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1.5px solid black;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  display: block;
+}
 
-    .footer a {
-      color: black;
-      text-decoration: underline;
-    }
+/* ----------------------
+   BUTTON
+------------------------*/
+.btn {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-bottom: 0.15rem solid black;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  margin-top: 2rem;
+  cursor: pointer;
+}
 
-    .footer a:hover { cursor: pointer; }
+.btn a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
 
-    .btn {
-      margin-top: 27px;
-      background-color: green;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-bottom: 2px solid black;
-      font-size: 20px;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
+/* ----------------------
+   FOOTER
+------------------------*/
+footer {
+  background-color: #f5f9fc;
+  width: 83vw;
+  padding: 5vh 2vw;
+  box-sizing: border-box;
+  margin-left: 20vh;
+}
 
-    .sign { color: grey; }
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
 
-    .main {
-      width: 50%;
-      padding: 20px;
-      padding-left: 150px;
-    }
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2vw;
+  font-size: 1rem;
+  margin-top: 30px;
+  column-gap: 9.5px;
+  row-gap: 0;
 
-    .second { font-size: 15px; }
 
-    .inputtype input {
-      border: 1.5px solid black;
-      width: 80%;
-      height: 30px;
-      display: block;
-    }
+}
 
-    .lastpart {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .lastpart svg { margin-top: 22px; }
-    .lastpart p { margin: 6px 0 0; }
+.footer-links li { 
+  margin: 0;   
+  text-decoration: underline; 
+  column-gap: 0; 
+  row-gap: 0;
+}
+.footer-links a { color: black; text-decoration: none; }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .mainfooter { width: 90%; padding-left: 20px; }
-    }
-    @media (max-width: 768px) {
-      .mainfooter { width: 100%; padding: 15px; }
-      .li { flex-direction: column; align-items: flex-start; gap: 6px; }
-    }
-    @media (max-width: 480px) {
-      body { font-size: 14px; }
-      .footer { padding: 10px; }
-      .lastpart svg { margin-top: 10px; height: 14px; width: 35px; }
-    }
-  </style>
+.footer-licence {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  row-gap: 0;
+}
+
+.footer-licence svg {
+  margin-top: 10px;
+  width: 4vw;
+  height: auto;
+  margin-bottom: 0vh;
+
+}
+
+.footer-licence p { margin-top: 0.3rem; }
+
+.text{
+  margin-top: 7vh;
+
+}
+.p{
+  color: rgb(116, 114, 114);
+}
+
+.text p {
+  margin: 1vh; /* removes all spacing */
+  margin-left: 0;
+}
+
+
+/* ----------------------
+   RESPONSIVE MOBILE
+------------------------*/
+@media (max-width: 600px) {
+  .content { width: 95%; padding: 1rem; }
+  .btn { width: 100%; text-align: center; }
+  footer { margin: auto; }
+  .footer-links { flex-direction: column; align-items: flex-start; }
+  .footer-licence svg { width: 20vw; }
+}
+</style>
 </head>
 <body>
-  <div class="main">
-    <div class="mainheading">
-      <h1>What is your passport number?</h1>
-    </div>
-    <div class="second">
-      <p>Passport number</p>
-      <p>For example, 120382978</p>
-    </div>
 
-    <label class="inputtype" for="passportInput">
-      <input type="text" name="passportInput" id="passportInput" >
-    </label>
-
-    <button class="btn" onclick="savePassport()">Continue</button>
+<div class="content">
+  <!-- <div class="text"> -->
+  <h1>What is your passport number?</h1>
+    <div class="text">
+  <p>Passport Number </p>
+  <p class = "p">For example: 120382978</p>
   </div>
 
-  <div class="mainfooter">
-    <footer class="footer">
-      <div class="li">
-        <li><a>Help</a></li>
-        <li><a>Privacy</a></li>
-        <li><a>Cookies</a></li>
-        <li><a>Accessibility Statement</a></li>
-        <li><a>Contact</a></li>
-        <li><a>Terms and Conditions</a></li>
-        <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
-        <li><a>Government Digital Service</a></li>
-      </div>
-      <div class="lastpart">
-        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo"
-          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-          <path fill="currentColor"
-            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145">
-          </path>
-        </svg>
-        <p>All content is available, except where otherwise stated</p>
-      </div>
-    </footer>
-  </div>
+  <label class="inputtype" for="passportInput">
+    <input type="text" name="passportInput" id="passportInput">
+  </label>
 
-  <script>
-    function savePassport() {
+  <button class="btn" onclick="savePassport()"><a href="thirdoption.html">Continue</a></button>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a>Help</a></li>
+      <li><a>Privacy</a></li>
+      <li><a>Cookies</a></li>
+      <li><a>Accessibility Statement</a></li>
+      <li><a>Contact</a></li>
+      <li><a>Terms and Conditions</a></li>
+      <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
+      <li><a>Government Digital Service</a></li>
+    </ul>
+    <div class="footer-licence">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+      </svg>
+      <p>All content is available, except where otherwise stated</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function savePassport() {
   const passport = document.getElementById('passportInput').value.trim().toUpperCase();
   sessionStorage.setItem("passportNumber", passport);
   window.location.href = "thirdoption.html"; 
-    }
-  </script>
+}
+</script>
+
 </body>
 </html>

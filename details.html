@@ -1,82 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>View and prove your immigration status</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View and prove your immigration status</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-  <style>
-    
+<style>
 :root{
   --gov-blue: #1d70b8;
   --gov-text: #0b0c0c;
-  --gov-muted: #505a5f;
-  --gov-border: #b1b4b6;
-  --gov-note: #d0d3d6;
-  --gov-beta: #f3f2f1;
-  --gov-green: #00703c;
 }
 
 *{ box-sizing: border-box; }
-html,body{ 
-  margin:0; 
-  padding:0; 
-  background:#fff; 
-  color:var(--gov-text); }
-body{
-  line-height: 1.5;
+
+/* -------------- BODY & LAYOUT -------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto Slab", serif;
-
+  background-color: #fff;
+  line-height: 1.4;
 }
 
-/* layout */
-.govuk-container{
+main.govuk-container {
+  flex: 1; /* Fill available space to push footer down */
   max-width: 720px;
-  padding: 20px;
-  padding-left: 180px;
-
+  width: 85%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
-/* Headings */
+/* ---------------- HEADINGS ---------------- */
 .page-title{
-  font-size: 34px;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   line-height: 1.2;
-  margin: 12px 0 20px;
+  margin: 2rem 0 1.5rem;
   font-weight: 800;
-  letter-spacing: .2px;
-  margin-top: 60px;
 }
+
 .h2{
-  font-size: 22px;
-  margin: 24px 0 12px;
-  font-weight: 800;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 1.5rem 0 0.8rem;
+  font-weight: 700;
 }
 
-/* Section spacing */
-.section{ margin-top: 0px; }
-
-/* Labels */
+/* ---------------- SHARE CODE ---------------- */
 .muted-label{
-  /* color: var(--gov-muted); */
   font-weight: 700;
   margin: 0 0 6px;
-  letter-spacing:.2px;
 }
 
-/* Share code – large, spaced groups like the screenshot */
 .share-code{
   font-weight: 700;
-  font-size: 42px;
-  /* letter-spacing: .06em;   between characters */
-  /* word-spacing: .1em;      between groups (double spaces used in HTML) */
+  font-size: clamp(2rem, 4vw, 3rem);
   margin: 6px 0 10px;
   text-transform: uppercase;
+  word-break: break-word;     /* break long sequences */
+  overflow-wrap: break-word;  /* allow wrapping */
+  white-space: normal;        /* allow wrapping instead of one line */
+  max-width: 100%;            /* fits container */
 }
 
-/* Validity note with left grey rule */
+/* ---------------- NOTE ---------------- */
 .note{
   display:flex;
   gap:0px;
@@ -85,261 +78,25 @@ body{
 }
 .note-bar{
   display:inline-block;
-  /* width:4px; */
   height: 28px;
-  /* background: var(--go)Steps with solid black circle numbers */
 }
 .note-text{
-    margin-left: 0px;
+  margin-left: 0px;
 }
-.step{
-  display:flex;
-  gap:14px;
-  margin: 0px 0;
-  align-items:center;
-  justify-content: flex-start;
-  margin-top: 0;
-}
-
-.bullet{
-  flex: 0 0 auto;
-  display:inline-grid;
-  place-items:center;
-  width:34px; 
-  height:34px;
-  border-radius:50%;
-  background-color:#0b0c0c;    /* solid black */
-  color:#fff;            /* white number */
-  font-weight:700;
-  font-size: 16px;
-}
-
-#hr{
-    color: grey;
-}
-
 .vertical-line{
-    border-left: 4px solid rgb(171, 166, 166);
-    margin-right: 20px;
-    height: 65px;               /* same height as text block */
-
-}
-.h2{
-  margin-bottom: 0px;
-}
-.text{
-  text-decoration: underline;
+  border-left: 4px solid rgb(171, 166, 166);
+  margin-right: 20px;
+  height: 65px;
 }
 
-.icon-link-print img{
-  height: 30px;
-  width: auto;
-  margin-right: 15px;
-}
-
-.icon-link-download img{
-    height: 70px;
-    width: auto;
-    margin-bottom: 0px;
-}
-
-    .action-links {
-      display: flex;
-      align-items: center;   
-      gap: 20px;             
-      flex-wrap: wrap;      
-    }
-
-    .action-links a {
-      display: inline-flex;
-      align-items: center; 
-      gap: 0px;
-      text-decoration: none;
-      color: #0044cc;
-      font-size: 17px;
-      white-space: nowrap; 
-
-    }
-    .lastpart svg { 
-    margin-top: 22px;
-    display: block; 
-  }
-    .lastpart p { 
-    margin: 6px 0 0;
-     }
-
-    .mainfooter {
-      width: 90%;
-      padding: 20px;
-      padding-left: 150px;
-    }
-
-    .footer {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      background-color: #f5f9fc;
-      padding: 20px;
-    }
-    .footer a {color: black;text-decoration: underline;}
-
-
-    .li {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
-      row-gap: 0;
-      padding: 0;
-      font-size: 16px;
-    }
-
-    .li li {  
-      margin: 0px;
-    }
-
-  .lastpart {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-
-
-    @media (max-width: 600px) {
-      .action-links {
-        flex-direction: column; /* stack on smaller screens */
-        align-items: flex-start;
-        gap: 15px;
-      }
-
-      /* ✅ Base styles (already defined above remain unchanged) */
-
-/* =============== RESPONSIVENESS =============== */
-@media (max-width: 600px) {
-  body {
-    font-size: 15px;
-    line-height: 1.4;
-    padding: 0 10px;
-  }
-
-  .govuk-container {
-    padding: 16px 12px 32px;
-  }
-
-  .page-title {
-    font-size: 26px;
-    margin-top: 30px;
-  }
-
-  .h2 {
-    font-size: 18px;
-  }
-
-  .share-code {
-    font-size: 28px;
-    word-break: break-word;
-  }
-
-  .note {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .vertical-line {
-    height: auto;
-    min-height: 40px;
-  }
-
-  /* Steps stack nicely */
-  .step {
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .bullet {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
-  }
-
-  /* Action links stacked vertically */
-  .action-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    margin-top: 20px;
-  }
-
-  .action-links a {
-    font-size: 16px;
-    gap: 8px;
-  }
-
-  .icon-link-print img,
-  .icon-link-download img {
-    height: 26px;  /* Keep icons small */
-    width: auto;
-    margin-right: 10px;
-  }
-
-  /* Footer adjustments */
-  .footer {
-    height: auto;
-    padding: 12px 10px;
-    text-align: center;
-  }
-
-  .footer-text {
-    width: auto;
-    margin: 8px auto;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .b {
-    width: 40%;
-    margin: 10px auto;
-  }
-}
-
-/* Extra small devices (under 400px) */
-@media (max-width: 400px) {
-  .page-title {
-    font-size: 22px;
-  }
-
-  .share-code {
-    font-size: 24px;
-  }
-
-  .action-links a {
-    font-size: 15px;
-  }
-
-  .icon-link-print img{
-    height: 22px;
-   }
-  
-  .icon-link-download img {
-    height: 42px;
-  }
-}
-
-/* Make bullet + text perfectly parallel */
+/* ---------------- STEPS ---------------- */
 .step{
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr); /* fixed circle, flexible text */
+  grid-template-columns: 34px minmax(0, 1fr);
   column-gap: 12px;
-  align-items: start;       /* top-align text with the bullet */
+  align-items: start;
   margin: 12px 0;
 }
-
-.step p{
-  margin: 0;                /* remove default p top/bottom gap */
-}
-
-/* Center the number inside the circle without affecting row alignment */
 .bullet{
   display: flex;
   align-items: center;
@@ -351,121 +108,213 @@ body{
   color: #fff;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1;           /* avoids baseline weirdness */
+  line-height: 1;
+}
+.step p{ margin: 0; }
+
+/* ---------------- ACTION LINKS ---------------- */
+.action-links {
+  display: flex;
+  align-items: center;   
+  gap: 20px;             
+  flex-wrap: wrap;      
+  margin-top: 1.5rem;
+}
+.action-links a {
+  display: inline-flex;
+  align-items: center; 
+  gap: 10px;
+  text-decoration: none;
+  color: #0044cc;
+  font-size: 1rem;
+}
+.action-links img {height: 40px;width: auto;display: block;}
+
+/* ---------------- BUTTONS ---------------- */
+.btn {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-bottom: 0.15rem solid black;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  margin-top: 2rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.btn a { color: white; text-decoration: none; display: block; }
+
+/* ---------------- IMAGE ---------------- */
+.img {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.img img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 2px solid black;
 }
 
-/* Mobile tweaks so it still lines up on small screens */
-@media (max-width: 600px){
-  .step{
-    grid-template-columns: 28px 1fr;
-    column-gap: 10px;
-  }
-  .bullet{
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
-  }
+/* ---------------------- FOOTER ---------------------- */
+footer {
+  background-color: #f5f9fc;
+  padding: 3vh 2vw;
+  width: 70%;
+  box-sizing: border-box;
+  margin-top: auto; /* Push footer to bottom */
+  margin: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  padding: 0;
+  margin: 0;
+  row-gap: 0;
+  column-gap: 9.5px;
+}
+.footer-links li { margin: 0; }
+.footer-links a { text-decoration: underline; color: black; }
+
+.footer-licence {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-licence svg {
+  width: 4vw;
+  height: auto;
+}
+.footer-licence p { margin: 0; }
+footer {
+  background-color: #f5f9fc;
+  padding: 3vh 2vw;
+  width: 70%; /* changed from 70% */
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.action-links img {
+  max-width: 100%;   /* ensures image never overflows */
+  height: auto;      /* maintain aspect ratio */
+}
+body {
+  overflow-x: hidden;
 }
 
 
-    }
 
 
-  </style>
+  .icon-link-print img{height: 50px;width: auto;display: block; margin-right: 9px;}
 
+  .icon-link-download img{height: 100px;width: auto;display: block;}
+
+
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+  main.govuk-container { width: 90%; padding: 1.5rem; }
+  .img img { width: 80%; }
+  .action-links { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  main.govuk-container { width: 100%; padding: 1rem; }
+  .page-title { font-size: 2rem; }
+  .h2 { font-size: 1rem; }
+  .btn { font-size: 1rem; padding: 0.5rem 1rem; }
+  .icon-link-print img{
+    margin-left: 32px;
+  }
+
+  .img img { width: 100%; }
+  footer { padding: 2vh 2vw; width: 100%; }
+  .footer-links { flex-direction: column; gap: 0.5rem; }
+  .footer-licence svg { width: 20vw; }
+  .share-code {
+      font-size: clamp(1.5rem, 6vw, 2rem);
+      letter-spacing: 0.05rem;
+  }
+}
+</style>
 </head>
 <body>
 
-  <!-- thin blue banner under the browser bar -->
+<main class="govuk-container">
+  <h1 class="page-title">Details you need to share</h1>
 
-  <main class="govuk-container">
-    <!-- Page heading -->
-    <h1 class="page-title">Details you need to share</h1>
+  <!-- Share code block -->
+  <div class="section">
+    <p class="muted-label">Share code</p>
+    <!-- Replace &nbsp; with spaces so it wraps on small screens -->
+    <div class="share-code" aria-label="Share code">S 9 X   A 6 A   6 W Y</div>
 
-    <!-- Share code block -->
-    <div class="section">
-      <p class="muted-label">Share code</p>
+    <div class="note">
+      <div class="vertical-line"></div>
+      <span class="note-bar" aria-hidden="true"></span>
+      <p class="note-text">This code is valid until 4 November 2025.</p>
+    </div>
+  </div>
 
-      <div class="share-code" aria-label="Share code">
-        S&nbsp;9&nbsp;X&nbsp;&nbsp;A&nbsp;6&nbsp;A&nbsp;&nbsp;6&nbsp;W&nbsp;Y
-      </div>
+  <!-- Steps -->
+  <div class="section">
+    <h2 class="h2">What to do next</h2>
 
-      <div class="note">
-        <div class="vertical-line"></div>
-        <span class="note-bar" aria-hidden="true"></span>
-        <p class="note-text">This code is valid until 4 November 2025.</p>
-      </div>
+    <div class="step">
+      <span class="bullet">1</span>
+      <p>Give this share code and your date of birth to the person you want to prove your status to.</p>
+    </div>
+    <div class="step">
+      <span class="bullet">2</span>
+      <p>To see your status, they must enter the share code and your date of birth at <a class="link">www.gov.uk/check-immigration-status</a></p>
+    </div>
+    <div class="step">
+      <span class="bullet">3</span>
+      <p>Contact them to make sure they have all the information they need.</p>
     </div>
 
-    <!-- What to do next -->
-    <div class="section">
-      <h2 class="h2">What to do next</h2>
+    <p class="help-text">To prove your status to someone else, you can re-use this code or create a new code – there is no limit to how many codes can be used at the same time.</p>
 
-      <div class="step">
-        <span class="bullet">1</span>
-        <p>
-          Give this share code and your date of birth to the person you want to
-          prove your status to.
-        </p>
-      </div>
-
-      <div class="step">
-        <span class="bullet">2</span>
-        <p>
-          To see your status, they must enter the share code and your date of birth
-          at <a class="link">www.gov.uk/check-immigration-status</a>
-        </p>
-      </div>
-
-      <div class="step">
-        <span class="bullet">3</span>
-        <p>
-          Contact them to make sure they have all the information they need.
-        </p>
-      </div>
-
-      <p class="help-text">
-        To prove your status to someone else, you can re-use this code or create a new code –
-        there is no limit to how many codes can be used at the same time.
-      </p>
-
-      <div class="action-links">
-        <a class="icon-link-print">
-          <img class = "img" src="printer-removebg-preview.png" alt="">
-          <!-- <span class="icon" aria-hidden="true"></span> -->
-          Print this page
-        </a>
-
-        <a class="icon-link-download">
-          <img src="secondicon.png" alt="">
-          <!-- <span class="icon" aria-hidden="true"></span> -->
-          Download PDF
-        </a>
-      </div>
+    <div class="action-links">
+      <a class="icon-link-print"><img src="printer-removebg-preview.png" alt="">Print this page</a>
+      <a class="icon-link-download"><img src="secondicon.png" alt="">Download PDF</a>
     </div>
-  </main>
+  </div>
+</main>
 
-
-    <div class="mainfooter">
-      <footer class="footer">
-        <div class="li">
-            <li><a >Help</a></li>
-            <li><a >Privacy</a></li>
-            <li><a >Cookies</a></li>
-            <li><a >Accessibilty Statement</a></li>
-            <li><a > Contact </a></li>
-            <li><a >Terms and Conditions</a></li>
-            <li><a >Rhestr o Wasanaethau Cymraeg</a></li>
-            <li><a >Government Digital Servise</a></li>
-      </div>
-            <div class="lastpart">
-            <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-            <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
-          </svg>        
-          <p>All content is available, except where otherwise stated</p>
-      </div>
-    </footer>
-      </div>
+<footer>
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a>Help</a></li>
+      <li><a>Privacy</a></li>
+      <li><a>Cookies</a></li>
+      <li><a>Accessibility Statement</a></li>
+      <li><a>Contact</a></li>
+      <li><a>Terms and Conditions</a></li>
+      <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
+      <li><a>Government Digital Service</a></li>
+    </ul>
+    <div class="footer-licence">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+      </svg>
+      <p>All content is available, except where otherwise stated</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
