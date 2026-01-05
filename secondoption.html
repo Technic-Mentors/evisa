@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecondOption</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ----------------------
+   GLOBAL STYLES
+------------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab", serif;
+  background-color: #fff;
+  line-height: 1.4;
+}
+
+/* ----------------------
+   MAIN CONTENT
+------------------------*/
+.content {
+  flex: 1;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.content h1 {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  margin-bottom: 1rem;
+}
+
+/* ----------------------
+   INPUT FIELD
+------------------------*/
+.inputtype input {
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1.5px solid black;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+/* ----------------------
+   BUTTON
+------------------------*/
+.btn {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-bottom: 0.15rem solid black;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* ----------------------
+   FOOTER
+------------------------*/
+footer {
+  background-color: #f5f9fc;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-links li { text-decoration: underline; }
+.footer-links a { color: black; text-decoration: none; }
+
+.footer-licence {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.footer-licence svg {
+  margin-top: 10px;
+  width: 100px;
+  height: auto;
+}
+
+.text { margin-top: 1rem; }
+.p { color: rgb(116, 114, 114); }
+
+/* ----------------------
+   RESPONSIVE MOBILE
+------------------------*/
+@media (max-width: 600px) {
+  .content { width: 95%; padding: 1rem; }
+  .btn { width: 100%; text-align: center; }
+  .inputtype input { max-width: 100%; }
+  .footer-links { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .footer-licence svg { width: 80px; }
+}
+</style>
+</head>
+<body>
+
+<div class="content">
+  <h1>What is your passport number?</h1>
+  <div class="text">
+    <p>Passport Number</p>
+    <p class="p">For example: 120382978</p>
+  </div>
+
+  <label class="inputtype" for="passportInput">
+    <input type="text" name="passportInput" id="passportInput">
+  </label>
+
+  <button class="btn" onclick="savePassport()">Continue</button>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a>Help</a></li>
+      <li><a>Privacy</a></li>
+      <li><a>Cookies</a></li>
+      <li><a>Accessibility Statement</a></li>
+      <li><a>Contact</a></li>
+      <li><a>Terms and Conditions</a></li>
+      <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
+      <li><a>Government Digital Service</a></li>
+    </ul>
+    <div class="footer-licence">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+      </svg>
+      <p>All content is available, except where otherwise stated</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function savePassport() {
+  const passport = document.getElementById('passportInput').value.trim().toUpperCase();
+  sessionStorage.setItem("passportNumber", passport);
+  window.location.href = "thirdoption.html"; 
+}
+</script>
+
+</body>
+</html>

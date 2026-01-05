@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eVisa Status</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  background-color: #fff;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.main h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.main h2, .main h3, .main h4 {
+  margin: 0.3rem 0 0.5rem;
+  color: #333;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.main p {
+  margin: 0.2rem 0 1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.main a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn, .butn {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  margin: 1.5rem 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-bottom: 0.15rem solid black;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* ------------------ IMAGE & ROTATE BUTTON ------------------ */
+.img {
+  text-align: center;
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+}
+
+.butn {
+  background-color: #f5f5f5;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------ HR LINES ------------------ */
+.main hr {
+  width: 100%;
+  max-width: 600px;
+  margin: 0.5rem 0;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+footer {
+  background-color: #f5f9fc;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  color: black;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.footer-licence {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.footer-licence svg {
+  width: clamp(80px, 15vw, 120px);
+  height: auto;
+}
+
+.footer-licence p {
+  margin: 0;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+  .main { width: 95%; padding: 1.5rem; }
+  .footer-links { justify-content: center; }
+  .footer-licence { align-items: center; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .main { width: 100%; padding: 1rem; }
+  .main h1 { font-size: 1.8rem; }
+  .btn, .butn { font-size: 0.95rem; padding: 0.6rem; }
+  .footer-links { flex-direction: column; gap: 0.5rem; align-items: center; }
+  .footer-licence { align-items: center; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="main">
+  <h1>Your immigration status (eVisa)</h1>
+
+  <h4>Name</h4>
+  <p>Mujahid Hussain</p>
+  <hr class="h">
+  <h4>Date of Birth</h4>
+  <p>21 August 2001</p>
+  <hr class="h">
+  <h4>Nationality</h4>
+  <p>PAK</p>
+  <hr class="h">
+  <h4>Status</h4>
+  <p>Skilled worker</p>
+  <hr class="h">
+  <h4>Valid Until</h4>
+  <p>22 December 2028</p>
+
+  <p>To stay in the UK after this date, you will need to have either pre-settled status or settled status under the EU Settlement Scheme (or another type of permission to stay).</p>
+  <p>You can apply to switch to settled status as soon as you are eligible for it. This is usually once you have lived in UK for 5 years. Find out <a>how to switch for settled status.</a></p>
+
+  <h2>Prove your Status</h2>
+  <p>If you need to prove your immigration status to someone, you can do this online with a share code.</p>
+
+  <button class="btn"><a href="details.html">Get a Share Code</a></button>
+
+  <div class="img">
+    <img src="image.jpg" alt="eVisa Image">
+    <button class="butn"><a>Rotate</a></button>
+  </div>
+
+  <h2>What you can do in the UK</h2>
+  <p>Your <a>pre-settled status means you can: </a></p>
+  <ul>
+    <li>live in the UK</li>
+    <li>work</li>
+    <li>study</li>
+    <li>rent a place to live</li>
+    <li>use the National Health Service (NHS) in a similar way to a permanent UK resident</li>
+    <li>access <a>public funds</a> if eligible</li>
+    <li>access a current account with a bank or building society in the UK</li>
+    <li>travel in and out of the UK. You may need required documents</li>
+  </ul>
+
+  <h2>Legal basis of status</h2>
+  <p>This status was granted in accordance with the EU exit separation agreements:</p>
+  <ul>
+    <li>for EU citizens, Withdrawal Agreement</li>
+    <li>for EEA EFTA citizens, EEA EFTA Separation Agreement</li>
+    <li>for Swiss citizens, Swiss Citizens' Rights Agreement</li>
+  </ul>
+
+  <h2>Keep your details up to date</h2>
+  <p>You must keep your personal details up to date in your UKVI account.</p>
+  <p>You can <a>check and update the details in your UKVI account</a> including your:</p>
+  <ul>
+    <li>phone number</li>
+    <li>email address</li>
+    <li>home address</li>
+    <li>Passport or identity documents</li>
+  </ul>
+
+  <h3>If there is an error on your eVisa</h3>
+  <p>If any of the information is wrong, you can <a>report an error with your eVisa</a></p>
+
+  <h2>Before you travel</h2>
+  <p>You may be delayed or denied boarding if you have not added your passport or identity document to your account.</p>
+  <p>Use the <a>update your UKVI account details service</a> to add a passport or identity document.</p>
+
+  <h2>Nationality Information</h2>
+  <p>When you add a passport or identity document to your account, the nationality will be displayed on your eVisa.</p>
+  <a>Leave Service</a>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a>Help</a></li>
+      <li><a>Privacy</a></li>
+      <li><a>Cookies</a></li>
+      <li><a>Accessibility Statement</a></li>
+      <li><a>Contact</a></li>
+      <li><a>Terms and Conditions</a></li>
+      <li><a>Rhestr o Wasanaethau Cymraeg</a></li>
+      <li><a>Government Digital Service</a></li>
+    </ul>
+    <div class="footer-licence">
+      <svg viewBox="0 0 483.2 195.7" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+      </svg>
+      <p>All content is available, except where otherwise stated</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
